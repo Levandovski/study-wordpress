@@ -23,11 +23,13 @@ get_header();
         while($query->have_posts()) : $query->the_post(); 
     ?>
 
-        <a href="<?= get_permalink(); ?>">
-            <?php 
-                echo the_title();
-                echo the_content();
-            ?>
+        <a href="<?= get_permalink(); ?>" class="link-aula">
+           <h1>
+           <?= the_title(); ?>
+           </h1>
+            <div>
+                <?= the_content(); ?>
+            </div>
         </a>
         <!--post-->
         <!-- <div class="col-md-4">
